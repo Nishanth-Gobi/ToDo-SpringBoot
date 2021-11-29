@@ -1,0 +1,209 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+/* Resetting the document */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style the header */
+header {
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%,
+                                     rgba(253,29,29,1) 50%, 
+                                     rgba(252,176,69,1) 100%);
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Acme', sans-serif;
+  letter-spacing: 2px;
+  margin-bottom: 15px;;
+}
+
+input {
+  width: 75%;
+  margin-right: 0;
+  padding: 10px;
+  border: none;
+  font-size: 14px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 14px;
+  transition: 0.2s;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #b2bec3;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: "";
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Style the trash button */
+.container {
+    margin: auto;
+    max-width: 600px;
+}
+
+.todoBlock {
+    padding: 30px;
+  margin-top: 50px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: -9px 17px 13px rgb(0 0 0 / 16%);
+}
+
+body {
+  background: rgb(68, 105, 247);
+  background: linear-gradient(
+    238deg,
+    rgba(68, 105, 247, 1) 0%,
+    rgba(246, 91, 245, 1) 100%
+  );
+}
+
+.titleHolder h1 {
+    text-transform: uppercase;
+    color: brown;
+    font-family: sans-serif;
+}
+
+.todoList {
+    width: 100%;
+    height: auto;
+}
+
+ul.list {
+    counter-increment: step-counter;
+    position: relative;
+    padding: 22px;
+}
+
+.list li {list-style: circle;padding: 15px;font-family: system-ui;font-weight: 600;}
+
+
+input#addInput {
+    padding: 8px 12px;
+    float: left;
+    outline: none;
+    border: 1px solid brown;
+}
+
+
+button#addBtn {
+    padding: 9px 20px;
+    margin: 0 17px;
+    float: left;
+    outline: none;
+    border: 1px solid brown;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.listHolder {
+    height: 400px;
+    overflow: scroll;
+}
+.list li {
+    border-bottom: 0.5px solid #0000000d;
+}
+::-webkit-scrollbar {
+    width: 3px;
+}
+::-webkit-scrollbar-thumb {
+    background: brown;
+    border-radius: 30%;
+}
+.listIcon {
+    float: right;
+    padding: 0 5px;
+    cursor: pointer;
+}
+.listIcon button {
+    margin: 0;
+    font-size: 13px;
+    /* cursor: pointer; */
+    pointer-events: none;
+    border: 1px solid;
+    color: #a52a2aab;
+    border-radius: 8px;
+    opacity: 37%;
+    transition: 0.2s ease-in-out;
+}
+.listIcon:hover button {
+    color: brown;
+    font-size: 14px;
+    opacity: 100%;
+}
+/* Js adding Css Property*/
+.rBox {
+    height: 0px;
+}
+.falling {
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+
+
+
